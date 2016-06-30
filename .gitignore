@@ -1,0 +1,7 @@
+﻿.gradle
+/build/
+.settings
+.project
+*.jar
+*.war
+*.ear
