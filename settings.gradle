@@ -1,3 +1,2 @@
 include 'ExpenseSplitterWeb'
-
 rootProject.name = 'ExpenseSplitter'
