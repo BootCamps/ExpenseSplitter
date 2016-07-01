@@ -7,7 +7,7 @@
 	
    <persistence-unit name="BS_DataSource" transaction-type="RESOURCE_LOCAL">
  	 <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider> 
-     <class>com.ford.bookstore.model.User</class>
+     <!-- <class>com.ford.bookstore.model.User</class> -->
 		<shared-cache-mode>NONE</shared-cache-mode>
     
     <properties>
