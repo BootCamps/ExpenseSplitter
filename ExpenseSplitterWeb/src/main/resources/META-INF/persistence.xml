@@ -11,9 +11,9 @@
     
     <properties>
       <property name="javax.persistence.jdbc.driver" value="org.h2.Driver" />
-      <property name="javax.persistence.jdbc.url"    value="jdbc:h2:~/EXPENSE_SPLITTER;MODE=MSSQLServer;USER=admin;PASSWORD=admin;AUTO_SERVER=TRUE;" />
-      <property name="javax.persistence.jdbc.user" value="sa" />
-      <property name="javax.persistence.jdbc.password" value="" />
+      <property name="javax.persistence.jdbc.url"    value="jdbc:h2:~/EXPENSESPLITTER;MODE=MSSQLServer;AUTO_SERVER=TRUE;" />
+      <property name="javax.persistence.jdbc.user" value="admin" />
+      <property name="javax.persistence.jdbc.password" value="admin" />
 	  <property name="eclipselink.ddl-generation" value="create-or-extend-tables" />
 	  <property name="eclipselink.ddl-generation.output-mode" value="database" />
 	  <property name="eclipselink.logging.level" value="CONFIG" />
