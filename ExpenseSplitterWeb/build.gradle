@@ -9,7 +9,44 @@ repositories {
 }
 
 dependencies {
-   testCompile 'junit:junit:4.12'
-}
+	    testCompile 'junit:junit:4.12'
+	    compile  'com.h2database:h2:1.4.192'
+   		compile  'log4j:log4j:1.2.16'
+   		
+   		// https://mvnrepository.com/artifact/javax.enterprise/cdi-api
+		compile group: 'javax.enterprise', name: 'cdi-api', version: '1.2'
+		
+		// https://mvnrepository.com/artifact/org.eclipse.persistence/eclipselink
+		compile group: 'org.eclipse.persistence', name: 'eclipselink', version: '2.6.2'
+		
+		// https://mvnrepository.com/artifact/org.eclipse.persistence/org.eclipse.persistence.jpa.jpql
+		compile group: 'org.eclipse.persistence', name: 'org.eclipse.persistence.jpa.jpql', version: '2.6.2'
+		
+		// https://mvnrepository.com/artifact/org.mockito/mockito-all
+		compile group: 'org.mockito', name: 'mockito-all', version: '1.10.19'
+		
+		// https://mvnrepository.com/artifact/org.eclipse.persistence/org.eclipse.persistence.jpa.modelgen
+		compile group: 'org.eclipse.persistence', name: 'org.eclipse.persistence.jpa.modelgen', version: '2.4.2'
+		
+		// https://mvnrepository.com/artifact/javax.annotation/javax.annotation-api
+		compile group: 'javax.annotation', name: 'javax.annotation-api', version: '1.2'
+		
+		// https://mvnrepository.com/artifact/javax.ws.rs/javax.ws.rs-api
+		compile group: 'javax.ws.rs', name: 'javax.ws.rs-api', version: '2.0.1'
+		
+		
+		// https://mvnrepository.com/artifact/javax.websocket/javax.websocket-api
+		compile group: 'javax.websocket', name: 'javax.websocket-api', version: '1.0'
+		
+		// https://mvnrepository.com/artifact/javax.ws.rs/jsr311-api
+		compile group: 'javax.ws.rs', name: 'jsr311-api', version: '1.1.1'
+		
+		// https://mvnrepository.com/artifact/javax.transaction/jta
+		compile group: 'javax.transaction', name: 'jta', version: '1.1'
+		
+		// https://mvnrepository.com/artifact/javax.transaction/transaction-api
+		compile group: 'javax.transaction', name: 'transaction-api', version: '1.1'
+   		
+	}
 
 
