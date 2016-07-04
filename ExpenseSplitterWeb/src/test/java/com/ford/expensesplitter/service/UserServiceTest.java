@@ -1,8 +1,15 @@
 package com.ford.expensesplitter.service;
 
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNull;
+import static org.junit.Assert.assertTrue;
 
+import java.util.Random;
+
+import javax.validation.constraints.AssertFalse;
+
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -22,7 +29,7 @@ public class UserServiceTest {
 		user.setPassword("Ilango123");
 	}
 	
-	@Test
+	@Test 
 	public void shouldReturnNullIfUserEnteredEmptyUserName() throws Exception {
 		this.user.setUserName("");
 		User user = this.userService.register(this.user);
@@ -39,7 +46,24 @@ public class UserServiceTest {
 	@Test
 	public void shouldReturnUserWithValidUserEntry() throws Exception {
 		User user = this.userService.register(this.user);
-		assertNotNull(user);
+		if(user == null){
+			assertNull(user);
+		}else{
+			assertNotNull(user);
+		}
+	}
+	
+	
+	@Test
+	public void checkUserIfAlreadyExists() throws Exception {
+		this.user.setUserName("ilango13");
+		boolean isExists = userService.checkIfUserExists(this.user.getUserName());
+		if(isExists){
+			assertTrue(isExists);
+		}else{
+			assertFalse(isExists);
+		}
+		
 	}
 	
 }

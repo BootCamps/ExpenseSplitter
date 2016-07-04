@@ -16,9 +16,15 @@ public class UserService {
 
 	public User register(User user) throws Exception {
 		if(!user.getUserName().isEmpty() && !user.getPassword().isEmpty()){
-			return this.userRepository.register(user);
+			if(checkIfUserExists(user.getUserName())){
+				return this.userRepository.register(user);
+			}
 		}
 		return null;
 	}
-
+ 
+	public boolean checkIfUserExists(String userName) {
+		return this.userRepository.findUserByUserName(userName).isEmpty();
+	}
+	
 }
