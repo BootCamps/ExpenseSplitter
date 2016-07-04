@@ -7,8 +7,8 @@
 	
    <persistence-unit name="EXPENSE_SPLITTER" transaction-type="RESOURCE_LOCAL">
  	 <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider> 
-		<shared-cache-mode>NONE</shared-cache-mode>
-    
+    <class>com.ford.expensesplitter.modal.User</class>
+    <shared-cache-mode>NONE</shared-cache-mode>
     <properties>
       <property name="javax.persistence.jdbc.driver" value="org.h2.Driver" />
       <property name="javax.persistence.jdbc.url"    value="jdbc:h2:~/EXPENSESPLITTER;MODE=MSSQLServer;AUTO_SERVER=TRUE;" />
