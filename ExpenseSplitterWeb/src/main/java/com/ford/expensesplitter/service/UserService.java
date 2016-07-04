@@ -9,6 +9,10 @@ public class UserService {
 	
 	@Inject
 	private UserRepository userRepository;
+	
+	public UserService() {
+		this.userRepository = new UserRepository();
+	}
 
 	public User register(User user) throws Exception {
 		if(!user.getUserName().isEmpty() && !user.getPassword().isEmpty()){
@@ -16,6 +20,5 @@ public class UserService {
 		}
 		return null;
 	}
-	
 
 }
