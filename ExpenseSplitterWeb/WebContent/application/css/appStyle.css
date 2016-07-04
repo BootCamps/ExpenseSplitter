@@ -3,3 +3,17 @@
 .form-group .required .control-label:after {
   content:"*";color:red;
 }
+
+.panel-heading-login {
+ padding: 10px 15px;
+  border-bottom: 1px solid transparent;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  color: white;
+  background-color: darkblue;
+  border-color: darkblue;
+}
+
+.panel-info-login {
+  border-color: darkblue;
+}
