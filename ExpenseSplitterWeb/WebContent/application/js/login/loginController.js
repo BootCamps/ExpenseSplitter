@@ -4,3 +4,9 @@ loginModule.controller("LoginController", function($state, $scope){
 		$state.go("group");
 	}
 })
+=======
+function login(){
+	this.user = function(username, password){
+		
+	}
+}

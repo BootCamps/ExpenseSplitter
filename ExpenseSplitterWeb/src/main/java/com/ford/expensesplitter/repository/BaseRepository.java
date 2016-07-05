@@ -18,4 +18,5 @@ public class BaseRepository implements Serializable{
 		this.em = factory.createEntityManager(); 
 	}	
 	
+	
 }

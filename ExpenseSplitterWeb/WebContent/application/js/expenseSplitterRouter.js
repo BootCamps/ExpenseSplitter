@@ -11,8 +11,8 @@ expenseSplitterApp.config(['$stateProvider', function($stateProvider){
     $stateProvider
         .state('login', {
             url: "/login",
-            controller: "LoginController",
-            templateUrl: "application/login/login.html"
+     controller: "LoginController",
+    templateUrl: "application/login/login.html"
         })
         .state('group', {
             url: "/group",
