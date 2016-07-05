@@ -1,1 +1,5 @@
-var loginModule = angular.module("login");
+function login(){
+	this.user = function(username, password){
+		
+	}
+}
