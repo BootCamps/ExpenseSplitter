@@ -17,3 +17,8 @@
 .panel-info-login {
   border-color: darkblue;
 }
+
+.grid {
+  width: 500px;
+  height: 250px;
+}

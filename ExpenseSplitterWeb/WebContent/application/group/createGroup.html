@@ -1,0 +1,28 @@
+
+	<div data-ng-controller="GroupController">
+		<form>
+			<div>
+				<table>
+					<tr>
+					<td colspan="2">
+					<label> <span class="required" style="text-align: left;">*</span>
+					</label><label class="col-md-1 control-label">&nbsp;Group Name:</label> 
+					<input
+						id="groupName" type="text" name="subject"
+						data-ng-model="groupName" placeholder="Enter Group Name"
+						required maxlength="20" class="col-md-2" autofocus /> 
+					<button type="button" class="btn btn-danger btn-xs"
+						id="createGrpBtn" data-ng-click="createGroup()">
+						Create Group</button>
+					</td>
+					</tr>
+					<tr>
+					<td><div id="grid1" data-ui-grid="gridGroupOptions" class="grid"></div></td>
+					<td> <div id="grid2" data-ui-grid="gridOptions" class="grid"></div></td>
+					</tr>
+				</table>
+		      </div>
+		</form>
+
+	</div>
+
