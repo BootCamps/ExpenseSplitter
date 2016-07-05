@@ -1,14 +1,23 @@
 
-describe("ExpenseSplitter",function(){
+describe("Login",function(){
 	
 	var loginService = {
 			validateUser:function(user, pass){
 				return false;
 			}
 	}
+	
+	beforeEach(function() {
+    	module('login');
+        inject(function($controller, $rootScope) {
+        	loginController = $controller('loginController', {$scope:$rootScope.$new()});
+        })
+	})
+
+	
 	it("Should return Success if username and password is valid", function(){
 		spyOn(loginService,'validateUser').and.returnValue(true);
-		var message= new login(loginService).validUser("user", "pass");
+		var message= loginController.validuser(loginService, "user", "pass");
 		expect(message).toEqual("Success");
 	});
 	
