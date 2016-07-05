@@ -12,10 +12,6 @@ public class UserRegisterController {
 	@Inject
 	private UserService userService;
 	
-	public UserRegisterController() {
-		this.userService = new UserService();
-	}
-	
 	@Path("/register")
 	public User registerUser(User user) throws Exception {
 		return this.userService.register(user);

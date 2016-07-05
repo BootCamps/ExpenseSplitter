@@ -1,35 +1,42 @@
 package com.ford.expensesplitter.controller;
 
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertNull;
+import static org.junit.Assert.assertSame;
+import static org.mockito.Mockito.when;
 
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.runners.MockitoJUnitRunner;
 
 import com.ford.expensesplitter.modal.User;
+import com.ford.expensesplitter.service.UserService;
 
+
+@RunWith(MockitoJUnitRunner.class)
 public class UserRegisterControllerTest {
 	
-	private UserRegisterController userRegisterController = new UserRegisterController(); 
+	@InjectMocks
+	private UserRegisterController userRegisterController; 
+ 	
+	@Mock
+	private UserService userService;
 	
-	private User user;
+	private User userToRegister;
+	private User expectedUser;
 	
 	@Before
 	public void setUp(){
-		this.user = new User();
-		user.setDisplayName("Naga");
-		user.setUserName("Naga12");
-		user.setPassword("Naga123");
+		this.expectedUser  = new User();
+		this.userToRegister = new User();
 	}
 	
 	@Test
 	public void shouldReturnUserWithValidUserEntry() throws Exception {
-		User user = this.userRegisterController.registerUser(this.user);
-		if(user == null){
-			assertNull(user);
-		}else{
-			assertNotNull(user);
-		}
+		when(this.userService.register(userToRegister)).thenReturn(expectedUser);
+		User registerdUser = this.userRegisterController.registerUser(this.userToRegister);
+		assertSame(expectedUser, registerdUser);
 	}
 	
 

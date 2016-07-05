@@ -10,20 +10,18 @@ public class UserService {
 	@Inject
 	private UserRepository userRepository;
 	
-	public UserService() {
-		this.userRepository = new UserRepository();
-	}
-
 	public User register(User user) throws Exception {
 		if(!user.getUserName().isEmpty() && !user.getPassword().isEmpty()){
-			if(checkIfUserExists(user.getUserName())){
+			if(userNameAvailable(user.getUserName())){
 				return this.userRepository.register(user);
+			}else{ 
+				return user;
 			}
 		}
 		return null;
 	}
  
-	public boolean checkIfUserExists(String userName) {
+	public boolean userNameAvailable(String userName) {
 		return this.userRepository.findUserByUserName(userName).isEmpty();
 	}
 	
