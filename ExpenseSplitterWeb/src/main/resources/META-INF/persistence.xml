@@ -8,6 +8,7 @@
    <persistence-unit name="EXPENSE_SPLITTER" transaction-type="RESOURCE_LOCAL">
  	 	<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider> 
     	<class>com.ford.expensesplitter.modal.User</class>
+    	<class>com.ford.expensesplitter.modal.Group</class>
     <shared-cache-mode>NONE</shared-cache-mode>
     <properties>
       <property name="javax.persistence.jdbc.driver" value="org.h2.Driver" />

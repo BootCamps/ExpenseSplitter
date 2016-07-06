@@ -9,6 +9,6 @@ public class BaseRepositoryTest {
 	@Test
 	public void checkConnection() throws Exception {
 		BaseRepository baseRepository = new BaseRepository();
-		assertNotNull(baseRepository.em);
+		assertNotNull(baseRepository.getEntityManager());
 	}
 }

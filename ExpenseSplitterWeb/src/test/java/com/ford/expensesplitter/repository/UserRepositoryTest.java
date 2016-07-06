@@ -21,11 +21,11 @@ public class UserRepositoryTest {
 		user.setPassword("Kamal123");
 	}
 	
-	@Test
-	public void shouldReturnUserWithValidEntry() throws Exception {
-		User user = this.userRepository.register(this.user);
-		assertNotNull(user);
-	}
+//	@Test
+//	public void shouldReturnUserWithValidEntry() throws Exception {
+//		User user = this.userRepository.register(this.user);
+//		assertNotNull(user);
+//	}
 	
 
 }

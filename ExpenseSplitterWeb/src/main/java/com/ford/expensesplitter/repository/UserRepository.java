@@ -11,14 +11,12 @@ public class UserRepository extends BaseRepository {
 	private static final long serialVersionUID = 1L;
 
 	public User register(User user) throws Exception {
-		em.getTransaction().begin();
-		em.persist(user);
-		em.getTransaction().commit();
+		persist(user);
 		return user;
 	}
 
 	public List<User> findUserByUserName(String userName) {
-		TypedQuery<User> query = em.createNamedQuery("User.findByUserName", User.class);
+		TypedQuery<User> query = getEntityManager().createNamedQuery("User.findByUserName", User.class);
 		query.setParameter("userName", userName);
 		return query.getResultList();
 	}

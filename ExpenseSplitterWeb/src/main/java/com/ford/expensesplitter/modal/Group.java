@@ -1,5 +1,6 @@
 package com.ford.expensesplitter.modal;
 
+import java.io.Serializable;
 import java.sql.Timestamp;
 
 import javax.persistence.Column;
@@ -13,7 +14,9 @@ import javax.validation.constraints.NotNull;
 
 @Entity
 @Table(name="ES_GROUPS")
-public class Group {
+public class Group implements Serializable{
+
+	private static final long serialVersionUID = 1L;
 
 	@Id @GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="GROUP_ID")
@@ -21,7 +24,7 @@ public class Group {
 	
 	@Column(name="GROUP_NAME")
 	@NotNull
-	private String gorupName;
+	private String groupName;
 	
 	@Column(name= "CREATED_DATE")
 	private Timestamp createdDate;
@@ -37,12 +40,12 @@ public class Group {
 		this.id = id;
 	}
 
-	public String getGorupName() {
-		return gorupName;
+	public String getGroupName() {
+		return groupName;
 	}
 
-	public void setGorupName(String gorupName) {
-		this.gorupName = gorupName;
+	public void setGroupName(String gorupName) {
+		this.groupName = gorupName;
 	}
 
 	public Timestamp getCreatedDate() {

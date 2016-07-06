@@ -5,7 +5,6 @@
  */
 var expenseSplitterApp = angular.module('expenseSplitterApp', ['ui.router','login', 'group']);
 
-
 expenseSplitterApp.config(['$stateProvider', function($stateProvider){
 
     $stateProvider

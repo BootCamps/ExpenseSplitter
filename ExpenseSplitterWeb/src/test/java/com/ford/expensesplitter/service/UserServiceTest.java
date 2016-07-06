@@ -5,11 +5,6 @@ import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
 
-import java.util.Random;
-
-import javax.validation.constraints.AssertFalse;
-
-import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
