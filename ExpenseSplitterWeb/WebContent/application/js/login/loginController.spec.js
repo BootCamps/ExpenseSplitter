@@ -1,35 +1,44 @@
+'use strict';
 
-describe("Login",function(){
-	
-	var loginService = {
-			validateUser:function(user, pass){
-				return false;
-			}
-	}
-	
-	beforeEach(function() {
-    	module('login');
-        inject(function($controller, $rootScope) {
-        	loginController = $controller('loginController', {$scope:$rootScope.$new()});
-        })
+describe("Login", function() {
+
+	var loginController, $rootScope, $scope, $state, $httpbackend, $controller, LoginService;
+
+	beforeEach(function() {
+		module('login');
+		
+		inject(function($injector) {
+			$rootScope = $injector.get('$rootScope');
+			$controller = $injector.get('$controller');
+			LoginService = $injector.get('LoginService');
+			$state = $injector.get('$state');
+		});
+		
+		$scope = $rootScope.$new();
+		$scope.user = {};
+		loginController = $controller('LoginController', {
+			$scope : $scope
+		});
 	})
 
-	
-	it("Should return Success if username and password is valid", function(){
-		spyOn(loginService,'validateUser').and.returnValue(true);
-		var message= loginController.validuser(loginService, "user", "pass");
-		expect(message).toEqual("Success");
+	it("Should redirect to Homepage if username and password is valid", function() {
+		spyOn(LoginService, 'validateUser').and.returnValue(true);
+		var $stateSpy = spyOn($state, 'go');
+		loginController.login();
+		expect($stateSpy).toHaveBeenCalledWith("/home");
 	});
-	
-	it("Should pass password and username to userService ", function(){
-		var loginServiceSpy = spyOn(loginService,'validateUser');
-		new login(loginService).validUser("user", "pass");
+
+	it("Should pass password and username to userService ", function() {
+		var loginServiceSpy = spyOn(LoginService, 'validateUser');
+		$scope.user.username="user";
+		$scope.user.password="pass";
+		loginController.login();
 		expect(loginServiceSpy).toHaveBeenCalledWith("user", "pass");
 	});
-	
-	it("Should return Username/Password is invalid message if userService says it is invalid", function(){
-		var message= new login(loginService).validUser("user", "pass");
-		expect("Username/Password is invalid").toEqual(message);
+
+	it("Should return Username/Password is invalid message if userService says it is invalid", function() {
+		loginController.login();
+		expect($scope.message).toEqual("Username/Password is invalid");
 	});
-	
+
 });

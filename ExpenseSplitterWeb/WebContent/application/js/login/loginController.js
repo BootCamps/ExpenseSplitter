@@ -1,10 +1,15 @@
 'use strict';
 
-angular.module('expenseSplitterApp').controller('LoginController', function(loginService){
-	var validuser = function(username, password){
-			if(loginService.validateUser(username, password)){
-				return "Success";
-			}
-			return "Username/Password is invalid";
+angular.module('login').controller('LoginController', function(LoginService, $scope, $state){
+	
+	$scope.user = {};
+	$scope.message = "";
+	
+	
+	this.login = function(){
+		if(LoginService.validateUser($scope.user.username, $scope.user.password)){
+			$state.go('/home');
 		}
+		$scope.message = "Username/Password is invalid";
+	}
 })

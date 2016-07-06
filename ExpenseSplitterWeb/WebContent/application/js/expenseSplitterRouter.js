@@ -3,14 +3,14 @@
 /*
  * Define application module
  */
-var expenseSplitterApp = angular.module('expenseSplitterApp', ['ui.router', 'group', 'signup']);
-
+var expenseSplitterApp = angular.module('expenseSplitterApp', ['ui.router', 'group', 'signup', 'login']);
 
 expenseSplitterApp.config(['$stateProvider', function($stateProvider){
 
     $stateProvider
         .state('login', {
             url: "/login",
+            controller: "LoginController",
             templateUrl: "application/login/login.html"
         })
         .state('signup', {

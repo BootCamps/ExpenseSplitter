@@ -1,4 +1,4 @@
-describe("User Registration", function() {
+xdescribe("User Registration", function() {
 	var userController;
 	
 	beforeEach(function() {

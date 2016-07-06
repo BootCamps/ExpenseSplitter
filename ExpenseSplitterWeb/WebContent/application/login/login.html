@@ -10,7 +10,7 @@
 			<div style="padding-top: 30px" class="panel-body">
 
 				<div id="loginalert" class="alert alert-danger col-sm-12"
-					data-ng-show="message">{{message}}</div>
+					data-ng-show="message"><label data-ng-bind="message"></label></div>
 
 				<form id="loginform" class="form-horizontal" role="form">
 
@@ -33,7 +33,7 @@
 
 						<div class="col-sm-12 controls">
 							<button id="loginBtn" class="btn btn-success"
-								data-ng-click="validateUser()">Login</button>
+								data-ng-click="login()">Login</button>
 						</div>
 					</div>
 
