@@ -2,15 +2,15 @@ package com.ford.expensesplitter.repository;
 
 import java.util.List;
 
-import javax.inject.Inject;
+import javax.enterprise.context.ApplicationScoped;
 import javax.persistence.TypedQuery;
 
 import com.ford.expensesplitter.modal.User;
 
+@ApplicationScoped
 public class UserRepository {
 	
-	@Inject
-	BaseRepository base;
+	BaseRepository base = new BaseRepository();
 
 	public User register(User user) throws Exception {
 		base.persist(user);

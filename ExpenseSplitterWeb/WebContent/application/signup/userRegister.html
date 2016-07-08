@@ -3,13 +3,13 @@
 		<div class="panel-heading-login">
 			<div class="panel-title">Register</div>
 		</div>
-		<div style="padding-top: 30px" class="panel-body" data-ng-controller="userRegisterController">
-			<form name="form" ng-submit="registerUser(user)" role="form">
+		<div style="padding-top: 30px" class="panel-body">
+			<form name="form" ng-submit="register(user)" role="form">
 				<div class="form-group"
 					ng-class="{ 'has-error': form.userName.$dirty && form.userName.$error.required }">
 					<label for="userName">Username</label> <input type="text"
 						name="userName" id="userName" class="form-control"
-						ng-model="user.firstName" required /> <span
+						ng-model="user.userName" required /> <span
 						ng-show="form.userName.$dirty && form.userName.$error.required"
 						class="help-block">Username is required</span>
 				</div>

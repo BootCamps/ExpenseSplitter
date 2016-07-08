@@ -1,14 +1,14 @@
 package com.ford.expensesplitter.service;
 
-import javax.inject.Inject;
+import javax.enterprise.context.ApplicationScoped;
 
 import com.ford.expensesplitter.modal.User;
 import com.ford.expensesplitter.repository.UserRepository;
 
+@ApplicationScoped
 public class UserService {
 	
-	@Inject
-	private UserRepository userRepository;
+	private UserRepository userRepository = new UserRepository();
 	
 	public User register(User user) throws Exception {
 		if(!user.getUserName().isEmpty() && !user.getPassword().isEmpty()){
