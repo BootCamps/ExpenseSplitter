@@ -1,4 +1,4 @@
-package com.ford.expensesplitter.modal;
+package training.bootcamp.expensesplitter.modal;
 
 import java.io.Serializable;
 

@@ -5,3 +5,7 @@
 *.jar
 *.war
 *.ear
+.gradle
+bin
+.sonar
+

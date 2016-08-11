@@ -1,8 +1,8 @@
-package com.ford.expensesplitter.repository;
+package training.bootcamp.expensesplitter.repository;
 
 import javax.inject.Inject;
 
-import com.ford.expensesplitter.modal.Group;
+import training.bootcamp.expensesplitter.modal.Group;
 
 public class GroupRepository {
 	

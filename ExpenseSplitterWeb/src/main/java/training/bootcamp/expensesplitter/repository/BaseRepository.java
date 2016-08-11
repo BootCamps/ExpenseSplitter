@@ -1,4 +1,4 @@
-package com.ford.expensesplitter.repository;
+package training.bootcamp.expensesplitter.repository;
 
 import java.io.Serializable;
 

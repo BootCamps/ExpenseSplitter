@@ -1,4 +1,4 @@
-package com.ford.expensesplitter.controller;
+package training.bootcamp.expensesplitter.controller;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
@@ -8,8 +8,8 @@ import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
-import com.ford.expensesplitter.modal.User;
-import com.ford.expensesplitter.service.UserService;
+import training.bootcamp.expensesplitter.modal.User;
+import training.bootcamp.expensesplitter.service.UserService;
 
 @Path("/user")
 @ApplicationScoped

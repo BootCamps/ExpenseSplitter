@@ -5,7 +5,7 @@
 	version="1.1">
 
 	<reload-interval value="3" />
-	<context-root uri="expenseSplitter-web" />
+	<context-root uri="ExpenseSplitterWeb/WebContext" />
 	<enable-directory-browsing value="false" />
 	<enable-file-serving value="true" />
 	<enable-reloading value="true" />

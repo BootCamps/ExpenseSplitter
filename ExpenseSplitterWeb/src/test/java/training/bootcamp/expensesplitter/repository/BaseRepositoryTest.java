@@ -1,4 +1,4 @@
-package com.ford.expensesplitter.repository;
+package training.bootcamp.expensesplitter.repository;
 
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
@@ -11,6 +11,8 @@ import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
+
+import training.bootcamp.expensesplitter.repository.BaseRepository;
 
 @RunWith(MockitoJUnitRunner.class)
 public class BaseRepositoryTest {

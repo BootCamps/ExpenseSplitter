@@ -1,4 +1,4 @@
-package com.ford.expensesplitter.service;
+package training.bootcamp.expensesplitter.service;
 
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNull;
@@ -18,8 +18,9 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
 
-import com.ford.expensesplitter.modal.User;
-import com.ford.expensesplitter.repository.UserRepository;
+import training.bootcamp.expensesplitter.modal.User;
+import training.bootcamp.expensesplitter.repository.UserRepository;
+import training.bootcamp.expensesplitter.service.UserService;
 
 @RunWith(MockitoJUnitRunner.class)
 public class UserServiceTest {

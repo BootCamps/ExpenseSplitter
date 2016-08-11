@@ -1,11 +1,11 @@
-package com.ford.expensesplitter.repository;
+package training.bootcamp.expensesplitter.repository;
 
 import java.util.List;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.persistence.TypedQuery;
 
-import com.ford.expensesplitter.modal.User;
+import training.bootcamp.expensesplitter.modal.User;
 
 @ApplicationScoped
 public class UserRepository {

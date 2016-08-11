@@ -1,4 +1,4 @@
-package com.ford.expensesplitter.repository;
+package training.bootcamp.expensesplitter.repository;
 
 import static org.junit.Assert.assertSame;
 import static org.mockito.Mockito.verify;
@@ -15,7 +15,9 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
 
-import com.ford.expensesplitter.modal.User;
+import training.bootcamp.expensesplitter.modal.User;
+import training.bootcamp.expensesplitter.repository.BaseRepository;
+import training.bootcamp.expensesplitter.repository.UserRepository;
 
 @RunWith(MockitoJUnitRunner.class)
 public class UserRepositoryTest {
